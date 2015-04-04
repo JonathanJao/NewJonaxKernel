@@ -1,0 +1,8 @@
+Copyright (C) 2009-2010 Jonathan F. Jao
+
+You may choose one of the licenses in the /docs/license directory.
+
+They are:
+	GNU General Public License v2
+	GNU General Public License v3
+	Apache License v2.0

@@ -1,0 +1,21 @@
+Copyright (C) 2009-2010 Jonathan F. Jao
+
+Install grub (theres a installation executable in the win32-tools.zip), and then in menu.lst of grub's configuration copy the following into the script:
+
+
+
+title New jonax kernel
+root(hdx,y)						//Replace x with the hard drive number and y with the partition number
+kernel /..../new jonax kernel/bin/NJkernel.bin 		//be careful: this is case sensitive
+boot
+
+
+
+make changes as necessary, then restart the computer and boot into NJkernel!
+If you are using the new version of Grub (GRUB 2 which is not included with New Jonax Kernel currently) then here is the script:
+
+menuentry "New Jonax Kernel"{
+	root = (hdx,y)
+	multiboot /...../NJkernel.bin
+	boot
+}

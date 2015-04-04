@@ -1,0 +1,18 @@
+	-=INSTRUCTIONS=-
+READ: u dont have to type the dollar sign before the commands.
+
+
+
+Step 1: Make sure you have some form of gcc and nasm installed. (unix-like systems should have it prepackaged. windows users- u just have to install the .exe's in the /tools/win32-tools.zip package(by running them). If you are very cautious and are afraid that it may be a virus you can donwload it from their website; just search for it on google or sumthin)
+
+Step 2: Once u have the path set to the gcc and nasm and ld binaries(this should only apply to windows users), you can just type make in the root directory.
+	$cd ./......./whatever/poop/bob's files/new jonax kernel
+
+Step 3: Now type "make all":
+	$make all
+
+Step 4: To clean type make clean. Windows "DEL" command not supported. Download cygwin!!!
+
+Step 5: Continue on to look at INSTALL.txt
+
+To boot the kernel look at INSTALL.txt
