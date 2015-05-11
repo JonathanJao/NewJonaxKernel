@@ -10,6 +10,7 @@ static void timer_callback(struct regs regs)
 	kprintf("%d",tick);
 	kprintf("\n");
 	*/
+	kprintf("Tick...");
 }
 
 void init_timer(u32int frequency)
