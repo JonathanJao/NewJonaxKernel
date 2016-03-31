@@ -7,11 +7,22 @@ ASFLAGS=-felf -dx86_32
 
 all: $(SOURCES) link
 
-clean:
-	rm *.o ./*/*.o ./*/*/*.o ./*/*/*/*.o kernel.bin *~ */*~ */*/*~ */*/*/*~
+qemu:
+	qemu-system-x86_64 -fda tools/floppy.img
 
 link:
 	ld $(LDFLAGS) -o kernel.bin $(SOURCES)
 
 .s.o:
 	nasm $(ASFLAGS) $<
+
+image:
+	#!/bin/bash
+	sudo /sbin/losetup /dev/loop0 tools/floppy.img
+	sudo mount /dev/loop0 /mnt
+	sudo cp kernel.bin /mnt/kernel.bin
+	sudo umount /dev/loop0
+	sudo /sbin/losetup -d /dev/loop0
+
+clean:
+	rm *.o ./*/*.o ./*/*/*.o ./*/*/*/*.o kernel.bin *~ */*~ */*/*~ */*/*/*~
